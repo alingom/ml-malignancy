@@ -1,0 +1,187 @@
+{
+  "psi": {
+    "mean radius": 0.0,
+    "mean texture": 0.0,
+    "mean perimeter": 0.0,
+    "mean area": 0.0,
+    "mean smoothness": 0.0,
+    "mean compactness": 0.0,
+    "mean concavity": 0.0,
+    "mean concave points": 0.0,
+    "mean symmetry": 0.0,
+    "mean fractal dimension": 0.0,
+    "radius error": 0.0,
+    "texture error": 0.0,
+    "perimeter error": 0.0,
+    "area error": 0.0,
+    "smoothness error": 0.0,
+    "compactness error": 0.0,
+    "concavity error": 0.0,
+    "concave points error": 0.0,
+    "symmetry error": 0.0,
+    "fractal dimension error": 0.0,
+    "worst radius": 0.0,
+    "worst texture": 0.0,
+    "worst perimeter": 0.0,
+    "worst area": 0.0,
+    "worst smoothness": 0.0,
+    "worst compactness": 0.0,
+    "worst concavity": 0.0,
+    "worst concave points": 0.0,
+    "worst symmetry": 0.0,
+    "worst fractal dimension": 0.0
+  },
+  "ks": {
+    "mean radius": {
+      "stat": 0.0,
+      "pvalue": 1.0,
+      "drift": false
+    },
+    "mean texture": {
+      "stat": 0.0,
+      "pvalue": 1.0,
+      "drift": false
+    },
+    "mean perimeter": {
+      "stat": 0.0,
+      "pvalue": 1.0,
+      "drift": false
+    },
+    "mean area": {
+      "stat": 0.0,
+      "pvalue": 1.0,
+      "drift": false
+    },
+    "mean smoothness": {
+      "stat": 0.0,
+      "pvalue": 1.0,
+      "drift": false
+    },
+    "mean compactness": {
+      "stat": 0.0,
+      "pvalue": 1.0,
+      "drift": false
+    },
+    "mean concavity": {
+      "stat": 0.0,
+      "pvalue": 1.0,
+      "drift": false
+    },
+    "mean concave points": {
+      "stat": 0.0,
+      "pvalue": 1.0,
+      "drift": false
+    },
+    "mean symmetry": {
+      "stat": 0.0,
+      "pvalue": 1.0,
+      "drift": false
+    },
+    "mean fractal dimension": {
+      "stat": 0.0,
+      "pvalue": 1.0,
+      "drift": false
+    },
+    "radius error": {
+      "stat": 0.0,
+      "pvalue": 1.0,
+      "drift": false
+    },
+    "texture error": {
+      "stat": 0.0,
+      "pvalue": 1.0,
+      "drift": false
+    },
+    "perimeter error": {
+      "stat": 0.0,
+      "pvalue": 1.0,
+      "drift": false
+    },
+    "area error": {
+      "stat": 0.0,
+      "pvalue": 1.0,
+      "drift": false
+    },
+    "smoothness error": {
+      "stat": 0.0,
+      "pvalue": 1.0,
+      "drift": false
+    },
+    "compactness error": {
+      "stat": 0.0,
+      "pvalue": 1.0,
+      "drift": false
+    },
+    "concavity error": {
+      "stat": 0.0,
+      "pvalue": 1.0,
+      "drift": false
+    },
+    "concave points error": {
+      "stat": 0.0,
+      "pvalue": 1.0,
+      "drift": false
+    },
+    "symmetry error": {
+      "stat": 0.0,
+      "pvalue": 1.0,
+      "drift": false
+    },
+    "fractal dimension error": {
+      "stat": 0.0,
+      "pvalue": 1.0,
+      "drift": false
+    },
+    "worst radius": {
+      "stat": 0.0,
+      "pvalue": 1.0,
+      "drift": false
+    },
+    "worst texture": {
+      "stat": 0.0,
+      "pvalue": 1.0,
+      "drift": false
+    },
+    "worst perimeter": {
+      "stat": 0.0,
+      "pvalue": 1.0,
+      "drift": false
+    },
+    "worst area": {
+      "stat": 0.0,
+      "pvalue": 1.0,
+      "drift": false
+    },
+    "worst smoothness": {
+      "stat": 0.0,
+      "pvalue": 1.0,
+      "drift": false
+    },
+    "worst compactness": {
+      "stat": 0.0,
+      "pvalue": 1.0,
+      "drift": false
+    },
+    "worst concavity": {
+      "stat": 0.0,
+      "pvalue": 1.0,
+      "drift": false
+    },
+    "worst concave points": {
+      "stat": 0.0,
+      "pvalue": 1.0,
+      "drift": false
+    },
+    "worst symmetry": {
+      "stat": 0.0,
+      "pvalue": 1.0,
+      "drift": false
+    },
+    "worst fractal dimension": {
+      "stat": 0.0,
+      "pvalue": 1.0,
+      "drift": false
+    }
+  },
+  "drift_features": []
+}

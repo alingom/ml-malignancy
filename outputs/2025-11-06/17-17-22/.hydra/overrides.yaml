@@ -1,0 +1,4 @@
+- model.name=gb
+- training.seed=42
+- data.test_size=0.2
+- training.cv_n_splits=5

@@ -1,0 +1,14 @@
+experiment:
+  name: malignancy_prediction
+model:
+  name: gb
+  params: {}
+data:
+  test_size: 0.2
+training:
+  seed: 42
+  cv_n_splits: 5
+output:
+  path: app/model.joblib
+metrics:
+- roc_auc

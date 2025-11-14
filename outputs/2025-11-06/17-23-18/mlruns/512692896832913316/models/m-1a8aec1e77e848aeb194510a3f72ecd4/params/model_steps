@@ -1,0 +1,1 @@
+[('clf', GradientBoostingClassifier(random_state=42))]

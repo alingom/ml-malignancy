@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/Diak%20DIAKITE/Desktop/ml_malignancy_project/outputs/2025-11-06/17-28-36/mlruns/985794322760909314/ca127753a8764c65a949ee226894fc87/artifacts
+end_time: 1762478945608
+entry_point_name: ''
+experiment_id: '985794322760909314'
+lifecycle_stage: active
+run_id: ca127753a8764c65a949ee226894fc87
+run_name: gb_20251106_172836
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762478917843
+status: 3
+tags: []
+user_id: Diak DIAKITE

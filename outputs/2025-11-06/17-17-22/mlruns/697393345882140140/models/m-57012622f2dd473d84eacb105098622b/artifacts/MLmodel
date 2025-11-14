@@ -1,0 +1,22 @@
+artifact_path: file:///C:/Users/Diak%20DIAKITE/Desktop/ml_malignancy_project/outputs/2025-11-06/17-17-22/mlruns/697393345882140140/models/m-57012622f2dd473d84eacb105098622b/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.5
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+mlflow_version: 3.5.1
+model_id: m-57012622f2dd473d84eacb105098622b
+model_size_bytes: 135656
+model_uuid: m-57012622f2dd473d84eacb105098622b
+prompts: null
+run_id: 2f1cb8cda11a40c392ece288bf76b4ad
+utc_time_created: '2025-11-07 01:17:36.307101'

@@ -1,0 +1,12 @@
+stages:
+  train:
+    cmd: python -m src.train model.name=${model.name} training.seed=${training.seed} data.test_size=${data.test_size} training.cv_n_splits=${cv.n_splits}
+    deps: []
+    params:
+      - model.name
+      - training.seed
+      - data.test_size
+      - cv.n_splits
+    outs:
+      - app/model.joblib
+      - app/model_meta.json

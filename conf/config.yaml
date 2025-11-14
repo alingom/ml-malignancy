@@ -1,0 +1,24 @@
+# Hydra configuration for training runs
+experiment:
+  name: malignancy_prediction
+
+model:
+  name: gb  # default: gb | rf | lr
+  # model params can be overridden via Hydra or contained here
+  params: {}
+
+data:
+  test_size: 0.2
+
+training:
+  seed: 42
+  cv_n_splits: 5
+
+output:
+  path: app/model.joblib
+
+metrics:
+  - roc_auc
+
+# Example overrides from CLI:
+# python -m src.train model.name=rf training.seed=123 data.test_size=0.25

@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/Diak%20DIAKITE/Desktop/ml_malignancy_project/outputs/2025-11-06/17-23-18/mlruns/512692896832913316/models/m-1a8aec1e77e848aeb194510a3f72ecd4/artifacts
+creation_timestamp: 1762478615062
+experiment_id: '512692896832913316'
+last_updated_timestamp: 1762478637952
+model_id: m-1a8aec1e77e848aeb194510a3f72ecd4
+model_type: null
+name: model
+source_run_id: 8dcc2c959db444c1bb2ca1bee1e5d558
+status: 2
+status_message: null

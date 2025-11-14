@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "model_name": "gb",
+    "seed": 42,
+    "cv_roc_auc_mean": 0.9919504643962849,
+    "cv_roc_auc_std": 0.0051969776313784185,
+    "test_roc_auc": 0.9907407407407408,
+    "n_train": 455,
+    "n_test": 114,
+    "features": [
+      "mean radius",
+      "mean texture",
+      "mean perimeter",
+      "mean area",
+      "mean smoothness",
+      "mean compactness",
+      "mean concavity",
+      "mean concave points",
+      "mean symmetry",
+      "mean fractal dimension",
+      "radius error",
+      "texture error",
+      "perimeter error",
+      "area error",
+      "smoothness error",
+      "compactness error",
+      "concavity error",
+      "concave points error",
+      "symmetry error",
+      "fractal dimension error",
+      "worst radius",
+      "worst texture",
+      "worst perimeter",
+      "worst area",
+      "worst smoothness",
+      "worst compactness",
+      "worst concavity",
+      "worst concave points",
+      "worst symmetry",
+      "worst fractal dimension"
+    ],
+    "target_names": [
+      "malignant",
+      "benign"
+    ]
+  },
+  "metrics": {
+    "accuracy": 0.956140350877193,
+    "precision": 0.9466666666666667,
+    "recall": 0.9861111111111112,
+    "f1": 0.9659863945578231,
+    "roc_auc": 0.9907407407407408,
+    "pr_auc": 0.9946687510034702,
+    "brier": 0.03964401112135283,
+    "confusion_matrix": [
+      [
+        38,
+        4
+      ],
+      [
+        1,
+        71
+      ]
+    ],
+    "n_test": 114
+  },
+  "top_permutation_importances": [
+    [
+      "worst concave points",
+      0.06578947368421052
+    ],
+    [
+      "worst texture",
+      0.015789473684210485
+    ],
+    [
+      "area error",
+      0.009649122807017541
+    ],
+    [
+      "mean texture",
+      0.00877192982456142
+    ],
+    [
+      "worst smoothness",
+      0.008771929824561408
+    ],
+    [
+      "worst perimeter",
+      -0.007894736842105288
+    ],
+    [
+      "worst radius",
+      0.007894736842105265
+    ],
+    [
+      "mean concave points",
+      0.006140350877192979
+    ],
+    [
+      "mean area",
+      0.0017543859649122862
+    ],
+    [
+      "radius error",
+      0.0017543859649122862
+    ]
+  ],
+  "comparisons": {}
+}

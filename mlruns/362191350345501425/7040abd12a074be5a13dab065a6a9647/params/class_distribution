@@ -1,0 +1,1 @@
+{np.str_('malignant'): np.int64(212), np.str_('benign'): np.int64(357)}

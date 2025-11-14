@@ -1,0 +1,17 @@
+cmd: python -m src.train model.name=gb training.seed=42 data.test_size=0.2 
+  training.cv_n_splits=5
+params:
+  params.yaml:
+    cv.n_splits: 5
+    data.test_size: 0.2
+    model.name: gb
+    training.seed: 42
+outs:
+- path: app/model.joblib
+  hash: md5
+  md5: 6189ef2fff154dfb3b3a87ed84bb44b2
+  size: 140636
+- path: app/model_meta.json
+  hash: md5
+  md5: 39e2da2fa005cfa0468130e304d9b6a5
+  size: 1009

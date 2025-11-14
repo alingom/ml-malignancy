@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/Diak%20DIAKITE/Desktop/ml_malignancy_project/mlruns/362191350345501425/9af172d861d946f5895a4c470bd2069a/artifacts
+end_time: 1762475657257
+entry_point_name: ''
+experiment_id: '362191350345501425'
+lifecycle_stage: active
+run_id: 9af172d861d946f5895a4c470bd2069a
+run_name: inquisitive-swan-607
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762475621437
+status: 3
+tags: []
+user_id: Diak DIAKITE
