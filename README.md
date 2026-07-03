@@ -1,4 +1,3 @@
-````markdown
 # End-to-End ML Case Study: Early Breast Cancer Diagnosis (Classification)
  
 Teaching-grade example for **PAU 3102 Research Methods**: problem framing → data →
@@ -77,5 +76,3 @@ streamlit run app/streamlit_app.py
 ```
 
 The sidebar allows uploading a CSV for batch predictions. On the right you can enter a single sample using the features saved in `app/model_meta.json`.
-
-````
