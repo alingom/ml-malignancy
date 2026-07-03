@@ -1,2 +1,38 @@
-*.pyc
+# Python
 __pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+antenv/
+
+# Local environment
+.env
+.env.*
+
+# Editors and OS files
+.DS_Store
+.vscode/
+.idea/
+
+# Generated ML artifacts
+app/model.joblib
+app/model_meta.json
+classification_report.txt
+confusion_matrix.png
+roc_curve.png
+reports/
+mlruns/
+outputs/
+
+# DVC local/cache files
+.dvc/cache/
+.dvc/tmp/
