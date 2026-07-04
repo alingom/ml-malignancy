@@ -1,3 +1,8 @@
+# End-to-End ML Case Study: Early Breast Cancer Diagnosis (Classification)
+ 
+Teaching-grade example for **PAU 3102 Research Methods**: problem framing → data →
+methodology → experiments & evaluation → deployment → reproducibility.
+ 
 # End-to-End ML Case Study: Early Breast Cancer Diagnosis
 
 Teaching-grade machine learning project for binary breast cancer classification. The repo covers data loading, model training, evaluation, model artifact handling, a FastAPI prediction API, and a Streamlit demo.
