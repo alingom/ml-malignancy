@@ -1,81 +1,118 @@
-````markdown
-# End-to-End ML Case Study: Early Breast Cancer Diagnosis (Classification)
- 
-Teaching-grade example for **PAU 3102 Research Methods**: problem framing → data →
-methodology → experiments & evaluation → deployment → reproducibility.
- 
+# End-to-End ML Case Study: Early Breast Cancer Diagnosis
+
+Teaching-grade machine learning project for binary breast cancer classification. The repo covers data loading, model training, evaluation, model artifact handling, a FastAPI prediction API, and a Streamlit demo.
+
+## Project Structure
+
+```text
+app/          FastAPI service, Streamlit UI, and generated model artifacts
+conf/         Hydra configuration
+examples/     Example prediction payloads
+src/          Data, training, evaluation, monitoring, and prediction code
+tests/        Pytest suite
+```
+
+Generated run outputs such as `mlruns/`, `outputs/`, reports, plots, and local model binaries are ignored by Git. Recreate them locally with the training and evaluation commands below.
+
 ## Quickstart
+
 ```bash
-python -m venv .venv && source .venv/bin/activate  # Windows: .venv\Scripts\activate
+python -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
-python -m src.train model.name=gb               # trains & saves to app/model.joblib (Hydra-driven)
-# Examples of config overrides with Hydra:
-# python -m src.train model.name=rf training.seed=123 data.test_size=0.25
-python src/evaluate.py                          # prints metrics & saves reports/last_eval.json
-python src/predict.py --json examples/one.json  # runs a sample prediction
-uvicorn app.main:app --reload                   # run API locally
-```
- 
- # MLflow UI
- mlflow ui  # Visualisez les résultats avec MLflow at http://localhost:5000
-
-## Data versioning with DVC
-
-This repository includes a minimal DVC pipeline to version model artefacts and make runs reproducible.
-
-Files added for DVC integration:
-- `dvc.yaml` - defines a `train` stage that runs the Hydra-driven training command and declares outputs (`app/model.joblib`, `app/model_meta.json`).
-- `params.yaml` - parameters that DVC can track across runs (model name, seed, test split, cv folds, output path).
-- `.dvcignore` - ignore rules for DVC/git.
-
-How to use DVC locally (one-time setup):
-
-1. Install DVC (you can also install via pip using the project requirements):
-```powershell
-pip install dvc
+pytest
 ```
 
-2. Initialize DVC in your repo (run once):
-```powershell
-dvc init
+## Train And Evaluate
+
+Train a model with the default Hydra config:
+
+```bash
+python -m src.train
 ```
 
-3. Configure a remote storage for model/artifact pushes (example: S3, GCS, SSH or a local directory):
-```powershell
-# example local remote
-dvc remote add -d myremote C:\path\to\dvc_remote
-# or S3: dvc remote add -d myremote s3://my-bucket/path
+Override model and training settings as needed:
+
+```bash
+python -m src.train model.name=rf training.seed=123 data.test_size=0.25
 ```
 
-4. Reproduce the `train` stage (runs the command and creates the outputs listed in `dvc.yaml`):
-```powershell
-dvc repro
+Evaluate the saved model:
+
+```bash
+python -m src.evaluate --model app/model.joblib
 ```
 
-5. Track and push artifacts to the remote:
-```powershell
-dvc push
+Run a sample CLI prediction:
+
+```bash
+python -m src.predict --json examples/one.json --model app/model.joblib
 ```
 
-Notes:
-- Because this project uses the sklearn built-in dataset, there is no large external raw dataset to `dvc add` by default. DVC is useful here to version the produced model artefacts (e.g., `app/model.joblib`) and `model_meta.json` produced by training.
-- To pin artifacts to commits, use git to commit the generated `.dvc` metafiles and the `dvc.lock` file (created after `dvc repro`) so each git commit references the exact artifact versions.
-- You can add `dvc add <path/to/data>` and commit the generated `<file>.dvc` file to version external datasets if you add external data later.
+## FastAPI Service
 
-## Web demo (Streamlit)
+Start the API:
 
-A lightweight Streamlit app is included to inspect evaluation metrics and run predictions locally.
+```bash
+uvicorn app.main:app --reload
+```
 
-Run the app after installing dependencies:
+Useful endpoints:
 
-```powershell
-# install deps (if not already)
-pip install -r requirements.txt
+```text
+GET  /health
+GET  /metadata
+POST /predict
+POST /predict/batch
+```
 
-# run streamlit UI
+Single prediction payload:
+
+```json
+{
+  "features": {
+    "mean radius": 12.0,
+    "mean texture": 15.0
+  }
+}
+```
+
+The real model expects every feature listed in `app/model_meta.json`, which is created by `python -m src.train`.
+
+## Streamlit Demo
+
+```bash
 streamlit run app/streamlit_app.py
 ```
 
-The sidebar allows uploading a CSV for batch predictions. On the right you can enter a single sample using the features saved in `app/model_meta.json`.
+The demo reads the saved model and metadata from `app/`, displays evaluation metrics when available, and supports single or batch predictions.
 
-````
+## MLflow And DVC
+
+Start the MLflow UI:
+
+```bash
+mlflow ui
+```
+
+Reproduce the DVC pipeline:
+
+```bash
+dvc repro
+```
+
+If you configure a DVC remote, push generated artifacts with:
+
+```bash
+dvc push
+```
+
+## Development Workflow
+
+```bash
+git checkout fix/app-and-tests
+pytest
+git add .
+git commit -m "Fix: add API predictions and cleanup repo"
+git push origin fix/app-and-tests
+```
